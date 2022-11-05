@@ -1,0 +1,251 @@
+<html>
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <h1 class="special">
+        <center>REGISTRATION PAGE</center>
+        <h1>
+
+
+            <style>
+                .box2 {
+                    width: 700px;
+                    height: 500px;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 18px;
+                    color: black;
+                    background-color: whitesmoke;
+                    opacity: 0.8;
+                    z-index: -1;
+                }
+            </style>
+
+
+            <form name="loginform" id="loginform">
+                <center>
+                    <div class="box2">
+                        <table>
+
+                            <tr>
+                                <td>
+                                    <label for="title">Title : </label>
+                                </td>
+                                <td>
+                                    <select name="title" id="title">
+                                        <option value="1">Mr.</option>
+                                        <option value="2">Mrs.</option>
+                                        <option value="3">Ms.</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="firstName"> First name : </label>
+                                </td>
+
+                                <td>
+                                    <input type="text" id="firstName" name="firstName" placeholder="Your first name"
+                                        required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="lastName"> Last name : </label>
+                                </td>
+
+                                <td>
+                                    <input type="text" id="lastName" name="lastName" placeholder="Your last name"
+                                        required>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <label for="password"> Password : </label>
+                                </td>
+
+                                <td>
+                                    <input type="text" id="password" name="password" placeholder="Enter password"
+                                        minlength="8" maxlength="10" required>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <label for="confirmpassword"> Password : </label>
+                                </td>
+
+                                <td>
+                                    <input type="text" id="confirmpassword" name="conpass"
+                                        placeholder="Confirm password" minlength="8" maxlength="10" required>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <label for="Date of Birth"> Date of Birth : </label>
+                                </td>
+                                <td>
+                                    <input type="date" id="Date of Birth" name="Date of Birth" placeholder="DD-MM-YYYY" required>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <label for="Gender"> Gender :</label>
+                                </td>
+                                <td id="gender">
+                                    <label for="Male"> Male :</label>
+
+                                    <input type="radio" id="Male" name="gender" placeholder="Male">
+
+                                    <label for="Female"> Female : </label>
+
+                                    <input type="radio" id="Female" name="gender" placeholder="Female">
+
+                                    <label for="Trans"> Transgender :</label>
+
+                                    <input type="radio" id="trans" name="gender" placeholder="Male">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <label for="address"> Address : </label>
+                                </td>
+
+                                <td>
+                                    <textarea input type="text" id="address" name="address"
+                                        placeholder="Your address"></textarea>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>
+                                    <label for="Mobile"> Mobile : </label>
+                                </td>
+                                <td>
+                                    <input type="number" id="Mobile" name="Mobile" placeholder="Mobile number" min="10"
+                                        required>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <label for="Email"> Email : </label>
+                                </td>
+                                <td>
+                                    <input type="text" id="Email" name="Email" placeholder="Email">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <label for="file"> Valid id proof: </label>
+                                </td>
+                                <td>
+                                    <input type="file" name="fileupload" accept="image/*" />
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <label for="Communication Preferences:"> Communication Preference : </label>
+                                </td>
+                                <td>
+
+                                    <input type="checkbox" id="email" name="email" value="Email">
+                                    <label for="email">Email</label>
+
+
+                                    <input type="checkbox" id="SMS" name="SMS" value="SMS">
+                                    <label for="SMS">SMS</label>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+
+                                    <input type="checkbox" id="terms" name="terms" value="terms">
+                                    <label for="terms">I agree to the <span style="color:blue">terms and
+                                            conditions</span> specified</label>
+                                </td>
+
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <input type="submit" id="submit" name="submit" value="SUBMIT" />
+                                </td>
+                                <td>
+                                    <input type="button" id="reset" name="RESET" value="RESET" />
+                                </td>
+                            </tr>
+
+
+                        </table>
+                    </div>
+                    <p><a class="btn btn-lg btn-primary" href="login (2).html" style="background-color:green ;">Login</a>
+                    </p>
+                </center>
+            </form>
+
+            <script>
+                var firstName = document.forms['loginform']['firstName'];
+                var lastName = document.forms['loginform']['lastName'];
+                var password = document.forms['loginform']['password'];
+                var confirmpassword = document.forms['loginform']['confirmpassword'];
+                var DateofBirth = document.forms['loginform']['Date of Birth'];
+                var gender = document.getElementById('gender');
+                var Email = document.forms['loginform']['Email'];
+                var name = "joyal@email.com"
+
+
+                var btn = document.getElementById('submit');
+
+                document.querySelectorAll('#loginform input').forEach(e => {
+                    e.addEventListener('keyup', function (event) {
+                        if (!(Email.value === name) || !(password.value == confirmpassword.value)) {
+                            btn.setAttribute('disabled', true);
+                        }
+                        else {
+                            btn.getAttribute('disabled');
+                            btn.removeAttribute('disabled');
+                        }
+                        /* if (password.value != confirmpassword.value) {
+                            btn.setAttribute('disabled', true);
+
+                        }
+                        else {
+                            btn.removeAttribute('disabled');*/
+
+
+
+
+                    })
+                });
+
+            </script>
+
+</body>
+
+<style>
+    body {
+        background-image: url(https://cdn.citymapia.com/kozhikode/online-taxi-calicut/32492/Portfolio.jpg?biz=8610);
+        background-size: 100%, 100%;
+        background-repeat: no-repeat;
+
+    }
+
+    .box2 {
+        border-radius: 20px;
+    }
+</style>
+
+</html>
